@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/124.10e147b2.chunk.js","mappings":"0JASE,UATc,WACZ,OACE,iCACE,wBAAI,kBACJ,uBAAG,iBAGR,C","sources":["views/Catalog/Catalog.jsx"],"sourcesContent":["const Catalog = () => {\n    return (\n      <>\n        <h1>Catalog page</h1>\n        <p>Show cars </p>\n      </>\n    );\n  };\n  \n  export default Catalog;"],"names":[],"sourceRoot":""}
