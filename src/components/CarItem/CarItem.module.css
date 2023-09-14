@@ -1,0 +1,27 @@
+.text {
+    font-size: 15px;
+}
+
+.img {
+    display: block;
+    max-width: 100%;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.item {
+    display: flex;
+    gap: 20px 10px;
+    flex-wrap: wrap;
+    font-size: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.container {
+    width: 274px;
+    height: 426px;
+}

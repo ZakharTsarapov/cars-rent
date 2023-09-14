@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
+import css from "./CarItem.module.css";
 
 const CarItem = ( { car }) => {
     const {
@@ -17,15 +18,23 @@ const CarItem = ( { car }) => {
     const pathName = location.pathname.includes('/catalog') ? '' : 'catalog/';
 
     return (
-    <div>
-        <Link to={`${pathName}${id}`} state={{ from: location }}>
-        <img src={img} width="395" alt={description}></img>
-        <h2>{model}</h2>
-        <p>{rentalPrice}</p>
+    <div className={css.container}>
+        <Link className={css.link} to={`${pathName}${id}`} state={{ from: location }}>
+        <img className={css.img} src={img} width="274" height="268" alt={description}></img>
+        <ul className={css.item}>
+            <li>{rentalPrice}</li>
+            <li>{model}</li>
+            <li>{year}</li>
+            <li>{rentalCompany}</li>
+            <li>{address}</li>
+            <li>{type}</li>
+        </ul>
+        {/* <h2 className={css.text}>{model}</h2> */}
+        {/* <p>{rentalPrice}</p>
         <p>{year}</p>
         <p>{rentalCompany}</p>
         <p>{address}</p>
-        <p>{type}</p>
+        <p>{type}</p> */}
         </Link>
     </div>
     );
