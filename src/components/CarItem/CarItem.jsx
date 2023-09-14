@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import css from "./CarItem.module.css";
 
 const CarItem = ( { car }) => {
@@ -7,11 +7,14 @@ const CarItem = ( { car }) => {
         year,
         rentalPrice,
         rentalCompany,
-        address,
         img,
         type,
         description,
+        engineSize,
+        fuelConsumption,
         id,
+        mileage,
+        make,
     } = car;
 
     const location = useLocation();
@@ -19,15 +22,19 @@ const CarItem = ( { car }) => {
 
     return (
     <div className={css.container}>
-        <Link className={css.link} to={`${pathName}${id}`} state={{ from: location }}>
+        <div className={css.link} to={`${pathName}${id}`} state={{ from: location }}>
         <img className={css.img} src={img} width="274" height="268" alt={description}></img>
+        <ul className={css.cardHead}>
+        <li>{model} {year}</li>
+        <li>{rentalPrice}</li>
+        </ul>
         <ul className={css.item}>
-            <li>{rentalPrice}</li>
-            <li>{model}</li>
-            <li>{year}</li>
             <li>{rentalCompany}</li>
-            <li>{address}</li>
             <li>{type}</li>
+            <li>{engineSize}</li>
+            <li>{fuelConsumption}</li>
+            <li>{mileage}</li>
+            <li>{make}</li>
         </ul>
         {/* <h2 className={css.text}>{model}</h2> */}
         {/* <p>{rentalPrice}</p>
@@ -35,7 +42,8 @@ const CarItem = ( { car }) => {
         <p>{rentalCompany}</p>
         <p>{address}</p>
         <p>{type}</p> */}
-        </Link>
+        </div>
+        <button className={css.btn}>Learn More</button>
     </div>
     );
 }
