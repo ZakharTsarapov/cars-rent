@@ -1,7 +1,14 @@
 import { useLocation } from 'react-router-dom';
+import { useState } from 'react';
 import css from "./CarItem.module.css";
+import Modal from 'components/Modal/Modal';
+import CarDetails from 'components/CarDetails/CarDetails';
 
-const CarItem = ( { car }) => {
+const CarItem = ({ car }) => {
+
+    const [showModal, setShowModal] = useState(false);
+    const toggleModal = () => setShowModal(prevShowModal => !prevShowModal);
+
     const {
         model,
         year,
@@ -21,6 +28,7 @@ const CarItem = ( { car }) => {
     const pathName = location.pathname.includes('/catalog') ? '' : 'catalog/';
 
     return (
+        <>
     <div className={css.container}>
         <div className={css.link} to={`${pathName}${id}`} state={{ from: location }}>
         <img className={css.img} src={img} width="274" height="268" alt={description}></img>
@@ -36,15 +44,16 @@ const CarItem = ( { car }) => {
             <li>{mileage}</li>
             <li>{make}</li>
         </ul>
-        {/* <h2 className={css.text}>{model}</h2> */}
-        {/* <p>{rentalPrice}</p>
-        <p>{year}</p>
-        <p>{rentalCompany}</p>
-        <p>{address}</p>
-        <p>{type}</p> */}
         </div>
-        <button className={css.btn}>Learn More</button>
+        <button type="button" className={css.btn} onClick={toggleModal}>Learn More</button>
     </div>
+
+    {showModal && (
+        <Modal onClose={toggleModal} showModal={showModal}>
+          <CarDetails car={car} toggleModal={toggleModal} />
+        </Modal>
+      )}
+    </>
     );
 }
 

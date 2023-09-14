@@ -34,7 +34,7 @@ export default function Modal({ onClose, children }) {
       return createPortal(
         <div className={css.overlay} onClick={handleBackdropClick}>
           <div className={css.modal}>
-            {children}
+          {children}
           </div>
         </div>,
         modalRoot
@@ -43,7 +43,5 @@ export default function Modal({ onClose, children }) {
   }
   
   Modal.propTypes = {
-    largeImageURL: PropTypes.string.isRequired,
-    alt: PropTypes.string.isRequired,
     onClose: PropTypes.func.isRequired,
   };
