@@ -1,3 +1,6 @@
+import css from "./CarDetails.module.css"
+import sprite from "../../images/sprite.svg"
+
 const CarDetails = ({ car, toggleModal }) => {
   const {
     id,
@@ -30,10 +33,14 @@ const CarDetails = ({ car, toggleModal }) => {
   const formattedMileage = formatNumberWithComma(mileage);
 
   return(
-    <div>
-        <button type="button" onClick={toggleModal}></button>
+    <div className={css.modalContainer}>
+        <button className={css.closeBtn} type="button" onClick={toggleModal}>
+            <svg className={css.svg}>
+                <use href={`${sprite}#icon-x-close`} />
+            </svg>
+        </button>
         <div>
-        <img src={img} alt={`${make} ${model}`}/>
+        <img className={css.carImage} src={img} alt={`${make} ${model}`}/>
         </div>
         <div>
             <p>{make} <span>{model}</span>, {year} </p>
