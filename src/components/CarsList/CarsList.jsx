@@ -1,13 +1,16 @@
 import CarItem from "components/CarItem/CarItem";
 import css from "./CarsList.module.css"
+import { useSelector } from "react-redux";
+import { selectCars } from "redux/selectors";
 
-const CarsList = ({ cars }) => {
+const CarsList = () => {
+    const cars = useSelector(selectCars)
     return(
-        <li className={css.item}>
-            {cars.map(car => {
-                return <CarItem key={car.id} car={car} />;
-            })}
-        </li>
+        <ul className={css.item}>
+            {cars.map((car, index) => (
+                <CarItem key={index} car={car} />
+            ))}
+        </ul>
     )
 }
 

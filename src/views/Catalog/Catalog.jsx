@@ -1,40 +1,37 @@
 import { Loader } from 'components/Loader/Loader';
 import CarsList from 'components/CarsList/CarsList';
 import { useEffect, useState } from 'react';
-import { getAllCars } from 'services/api';
-import css from "./Catalog.module.css"
+import { getCars } from 'services/api';
+import css from './Catalog.module.css';
+import LoadMoreBtn from 'components/LoadMoreBtn/LoadMoreBtn';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectError, selectIsLoading } from 'redux/selectors';
+import { clearCarsData } from 'redux/slice';
+
 
 const Catalog = () => {
-  const [allCars, setAllCars] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [page, setPage] = useState(1);
+  const dispatch = useDispatch();
+  const isLoading = useSelector(selectIsLoading);
+  const error = useSelector(selectError);
+
+  const onClickBtn = () => setPage(prevPage => prevPage + 1);
 
   useEffect(() => {
-    const fetchAllCars = async () => {
-      try {
-        setLoading(true);
-        const result = await getAllCars();
-        setAllCars([...result]);
-      } catch (error) {
-        setError(error.message);
-      } finally {
-        setLoading(false);
-      }
-    };
+    dispatch(clearCarsData());
+  }, [dispatch]);
 
-    fetchAllCars();
-  }, []);
+  useEffect(() => {
+    dispatch(getCars(page));
+  }, [dispatch, page]);
 
   return (
-    <>
-      <h1 className={css.name}>Catalog rental cars</h1>
-      <ul className={css.list}>
-        <CarsList cars={allCars} />
-      </ul>
-
-      {loading && <Loader />}
-      {error && <h1>Something went wrong...</h1>}
-    </>
+    <div className={css.name}>
+      {isLoading && !error && <Loader />}
+      {error && <b>{error}</b>}
+      <CarsList  data={page}/>
+      {32 / 8 > page && !isLoading && <LoadMoreBtn onClick={onClickBtn} />}
+    </div>
   );
 };
 
