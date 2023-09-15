@@ -1,9 +1,9 @@
+import css from "./Home.module.css"
+
 const Home = () => {
   return (
-    <>
-      <h1>Home page</h1>
-      <p>Home page with information about our products</p>
-    </>
+    <div className={css.container}>
+    </div>
   );
 };
 

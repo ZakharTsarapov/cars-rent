@@ -5,8 +5,8 @@ import { Loader } from "../Loader/Loader";
 
 export const Layout = () => {
   return (
-    <div className={css.container}>
-      <header>
+    <>
+    <header className={css.header}>
         <ul className={css.list}>
           <li>
             <Link className={css.nav} to="/">
@@ -25,13 +25,13 @@ export const Layout = () => {
           </li>
         </ul>
       </header>
+    
+      
       <Suspense fallback={<Loader />}>
         <main className={css.cont}>
-        <div >
         <Outlet />
-        </div>
         </main>
       </Suspense>
-    </div>
+    </>
   );
 };
