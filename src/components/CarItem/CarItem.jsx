@@ -65,7 +65,7 @@ const CarItem = ({ car }) => {
         </div>
           <ul className={css.cardHead}>
             <li>
-              {model} {year}
+            {make}  <span className={css.model}>{model}</span>,  {year} 
             </li>
             <li>{rentalPrice}</li>
           </ul>
@@ -77,7 +77,6 @@ const CarItem = ({ car }) => {
             <li>{city}</li>
             <li>{fuelConsumption}</li>
             <li>{mileage}</li>
-            <li>{make}</li>
           </ul>
         </div>
         <button type="button" className={css.btn} onClick={toggleModal}>

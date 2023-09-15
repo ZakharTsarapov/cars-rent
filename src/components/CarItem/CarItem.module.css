@@ -14,12 +14,14 @@
 
 .item {
     display: flex;
-    gap: 5px 10px;
+    gap: 6px 10px;
     flex-wrap: wrap;
     font-size: 12px;
     list-style: none;
     padding: 0;
     margin-top: 8px;
+    color: #121417;
+    opacity: 50%;
 }
 
 .container {
@@ -33,6 +35,9 @@
     list-style: none;
     padding: 0;
     margin-top: 14px;
+    font-family: Manrope-Medium;
+    line-height: 18px;
+    font-size: 20px;
 }
 
 .btn {
@@ -78,4 +83,8 @@
     position: relative;
   overflow: hidden;
   border-radius: 15px;
+}
+
+.model {
+    color: #3470FF;
 }
