@@ -26,8 +26,10 @@ export const Layout = () => {
         </ul>
       </header>
       <Suspense fallback={<Loader />}>
-        <main>
-          <Outlet />
+        <main className={css.cont}>
+        <div >
+        <Outlet />
+        </div>
         </main>
       </Suspense>
     </div>
