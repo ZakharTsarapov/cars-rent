@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cars-rent/static/css/main.2eb8371d.css",
-    "main.js": "/cars-rent/static/js/main.25ead1b4.js",
+    "main.css": "/cars-rent/static/css/main.ca48cfa6.css",
+    "main.js": "/cars-rent/static/js/main.fd1320d0.js",
     "static/js/244.d9ac4c54.chunk.js": "/cars-rent/static/js/244.d9ac4c54.chunk.js",
     "static/css/899.9e156689.chunk.css": "/cars-rent/static/css/899.9e156689.chunk.css",
     "static/js/899.6654de4a.chunk.js": "/cars-rent/static/js/899.6654de4a.chunk.js",
@@ -12,8 +12,8 @@
     "static/media/Manrope-Regular.ttf": "/cars-rent/static/media/Manrope-Regular.a9b9e09fe6b69741f316.ttf",
     "static/media/sprite.svg": "/cars-rent/static/media/sprite.c44a96f24e6b6014bd950d179eb66975.svg",
     "index.html": "/cars-rent/index.html",
-    "main.2eb8371d.css.map": "/cars-rent/static/css/main.2eb8371d.css.map",
-    "main.25ead1b4.js.map": "/cars-rent/static/js/main.25ead1b4.js.map",
+    "main.ca48cfa6.css.map": "/cars-rent/static/css/main.ca48cfa6.css.map",
+    "main.fd1320d0.js.map": "/cars-rent/static/js/main.fd1320d0.js.map",
     "244.d9ac4c54.chunk.js.map": "/cars-rent/static/js/244.d9ac4c54.chunk.js.map",
     "899.9e156689.chunk.css.map": "/cars-rent/static/css/899.9e156689.chunk.css.map",
     "899.6654de4a.chunk.js.map": "/cars-rent/static/js/899.6654de4a.chunk.js.map",
@@ -21,7 +21,7 @@
     "656.c45ec109.chunk.js.map": "/cars-rent/static/js/656.c45ec109.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2eb8371d.css",
-    "static/js/main.25ead1b4.js"
+    "static/css/main.ca48cfa6.css",
+    "static/js/main.fd1320d0.js"
   ]
 }
