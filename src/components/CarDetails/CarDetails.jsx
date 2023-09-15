@@ -42,49 +42,47 @@ const CarDetails = ({ car, toggleModal }) => {
         <div>
         <img className={css.carImage} src={img} alt={`${make} ${model}`}/>
         </div>
-        <div>
-            <p>{make} <span>{model}</span>, {year} </p>
+        <div className={css.info}>
+            <p>{make} <span className={css.model}>{model}</span>, {year} </p>
         </div>
-        <ul>
+        <ul className={css.firstList}>
             <li>{city}</li>
             <li>{country}</li>
             <li>Id: {id}</li>
             <li>Year: {year}</li>
             <li>Type: {type}</li>
-        </ul>
-        <ul>
             <li>Fuel Consumption: {fuelConsumption}</li>
             <li>Engine Size: {engineSize}</li>
         </ul>
-        <p>{description}</p>
-        <p>Accessories and functionalities:</p>
-        <ul>
+        <p className={css.desc}>{description}</p>
+        <p className={css.accs}>Accessories and functionalities:</p>
+        <ul className={css.firstList}>
             {accessories.map((item, index) =>(
                 <li key={index}>{item}</li>
             ))}
         </ul>
-        <ul>
+        <ul className={css.firstList}>
             {functionalities.map((item, index) =>(
                 <li key={index}>{item}</li>
             ))}
         </ul>
-        <p>Rental Conditions:</p>
-        <ul>
+        <p className={css.accs}>Rental Conditions:</p>
+        <ul className={css.secondList}>
             <li>
                 {ageCarConditions[0]}:{""}
-                <span>{ageCarConditions[1]}</span>
+                <span className={css.int}>{ageCarConditions[1]}</span>
             </li>
             {carConditions.slice(1).map((item, index) => (
             <li key={index}>{item}</li>
         ))}
         <li>
-            Mileage: <span>{formattedMileage}</span>
+            Mileage: <span className={css.int}>{formattedMileage}</span>
         </li>
         <li>
-            Price: <span>{rentalPrice}</span>
+            Price: <span className={css.int}>{rentalPrice}</span>
         </li>
         </ul>
-        <a href="tel:+380730000000">Rental Car</a>
+        <a className={css.btn} href="tel:+380730000000">Rental Car</a>
     </div>
   )
 };

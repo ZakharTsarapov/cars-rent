@@ -13,8 +13,6 @@
   object-fit: cover;
   width: 461px;
   height: 248px;
-  justify-content: center;
-  margin-left: 40px;
 }
 
 .svg {
@@ -41,4 +39,69 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+.info {
+  margin-top: 14px;
+  font-family: Manrope-Medium;
+}
+
+.model {
+  color: #3470FF;
+  line-height: 24px;
+}
+
+.firstList {
+  list-style: none;
+  color: #121417;
+  opacity: 50%;
+  display: flex;
+  font-size: 12px;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.desc {
+  font-family: Manrope-Regular;
+  font-size: 20px;
+  margin-top: 14px;
+}
+
+.accs {
+  font-family: Manrope-Regular;
+  font-size: 20px;
+  margin-top: 24px;
+}
+
+.secondList {
+  list-style: none;
+  color: #121417;
+  display: flex;
+  font-size: 15px;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.btn {
+  background-color: #3470FF;
+  color: #ffffff;
+  border-radius: 10px;
+  width: 170px;
+  height: 44px;
+  border: 0px;
+  line-height: 20px;
+  font-size: 15px;
+  margin-top: 35px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.int {
+  color: #3470FF;
+  margin-left: 3px;
 }
