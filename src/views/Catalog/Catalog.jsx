@@ -29,7 +29,7 @@ const Catalog = () => {
     <div className={css.name}>
       {isLoading && !error && <Loader />}
       {error && <b>{error}</b>}
-      <CarsList  data={page}/>
+      <CarsList />
       {32 / 8 > page && !isLoading && <LoadMoreBtn onClick={onClickBtn} />}
     </div>
   );

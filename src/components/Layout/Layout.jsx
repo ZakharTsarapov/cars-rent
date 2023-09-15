@@ -5,7 +5,7 @@ import { Loader } from "../Loader/Loader";
 
 export const Layout = () => {
   return (
-    <div>
+    <div className={css.container}>
       <header>
         <ul className={css.list}>
           <li>
