@@ -12,8 +12,8 @@ const CarDetails = ({ car, toggleModal }) => {
     description,
     fuelConsumption,
     engineSize,
-    // accessories,
-    // functionalities,
+    accessories,
+    functionalities,
     rentalPrice,
     address,
     rentalConditions,
@@ -57,26 +57,26 @@ const CarDetails = ({ car, toggleModal }) => {
             <li>Engine Size: {engineSize}</li>
         </ul>
         <p>{description}</p>
-        {/* <p>Accessories and functionalities:</p>
+        <p>Accessories and functionalities:</p>
         <ul>
-            {accessories.map((item, index) =>{
+            {accessories.map((item, index) =>(
                 <li key={index}>{item}</li>
-            })}
+            ))}
         </ul>
         <ul>
-            {functionalities.map((item, index) =>{
+            {functionalities.map((item, index) =>(
                 <li key={index}>{item}</li>
-            })}
-        </ul> */}
+            ))}
+        </ul>
         <p>Rental Conditions:</p>
         <ul>
             <li>
                 {ageCarConditions[0]}:{""}
                 <span>{ageCarConditions[1]}</span>
             </li>
-            {/* {carConditions.slice(1).map((item, index) => {
+            {carConditions.slice(1).map((item, index) => (
             <li key={index}>{item}</li>
-        })} */}
+        ))}
         <li>
             Mileage: <span>{formattedMileage}</span>
         </li>
