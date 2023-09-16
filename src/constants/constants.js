@@ -22,6 +22,8 @@ export const makes = [
     "Kia",
     "Honda",
     "Toyota",
+    "Bugatti",
+    "Maserati",
     "Land"
   ]
 

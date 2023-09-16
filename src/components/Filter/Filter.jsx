@@ -1,8 +1,11 @@
 import css from "./Filter.module.css"
 import { makes, price } from "constants/constants";
 import sprite from "../../images/sprite.svg"
+import { useDispatch } from "react-redux";
 
 const Filter = () => {
+
+
     return (
         <form className={css.form}>
         <div className={css.thumb}>
@@ -55,7 +58,7 @@ const Filter = () => {
         </div>
         </div>
 
-        <button className={css.btn} type="submit" onClick={()=> {}}>Search</button>
+        <button className={css.btn} type="submit">Search</button>
         </form>
     )
 }
