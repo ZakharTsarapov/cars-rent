@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[855],{4855:function(e,r,a){a.r(r),a.d(r,{default:function(){return o}});var t="Home_container__ct3+Q",n="Home_hero__4oj6F",c=a(184),o=function(){return(0,c.jsx)("div",{className:t,children:(0,c.jsx)("h1",{className:n,children:'"Drive our own Dream" - Zakhar T.'})})}}}]);
+//# sourceMappingURL=855.f9f35aa1.chunk.js.map
