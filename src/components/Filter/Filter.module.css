@@ -1,23 +1,100 @@
 .form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    align-items: flex-end;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.thumb {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.headLabel {
+  margin-bottom: 8px;
+  color: #8a8a89;
+  font-size: 14px;
+  line-height: 1.28;
+}
+
+.select {
+  appearance: none;
+  width: 224px;
+  height: 48px;
+  padding: 0 36px 0 18px;
+  border-radius: 14px;
+  border: none;
+  outline: none;
+  background-color: #f7f7fb;
+  font-family: 'Manrope';
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.secondSelect {
+    appearance: none;
+  width: 125px;
+  height: 48px;
+  padding: 0 36px 0 18px;
+  border-radius: 14px;
+  border: none;
+  outline: none;
+  background-color: #f7f7fb;
+  font-family: 'Manrope';
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.svg {
+    position: absolute;
+    right: 12px;
+    bottom: 14px;
+    width: 16px;
+    height: 16px;
+    pointer-events: none;
 }
 
 .btn {
-    height: 44px;
-    width: 130px;
-    background-color: #3470FF;
-    border: none;
-    border-radius: 5px;
-    color: #ffffff;
+  height: 44px;
+  width: 130px;
+  background-color: #3470ff;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
 }
 
 .inputs {
-    display: flex;
+  display: flex;
+}
+
+.inputThumb {
+    position: relative;
+}
+
+.input {
+    width: 160px;
+    height: 48px;
+    padding: 14px 24px 14px 0;
+    border: none;
+    outline: none;
+    background-color: #f7f7fb;
+    border-right: 1px solid rgba(138, 138, 137, 0.2);
+    font-family: 'Manrope';
+    font-weight: 600;
+}
+
+.inpText {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    font-family: 'Manrope';
+    font-weight: 600;
+    font-size: 14px;
 }

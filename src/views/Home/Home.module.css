@@ -1,18 +1,22 @@
-
 .container {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    padding: 0 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background-image: url(../Home/cars.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  padding: 0 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: url(../Home/cars1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
+.hero {
+  margin-top: 25%;
+  margin-left: 35%;
+  color: rgba(230, 13, 31, 0.87);
+}

@@ -1,12 +1,12 @@
 .item {
-    width: 1250px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    gap: 30px 40px;
-    flex-wrap: wrap;
-    font-size: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
+  width: 1250px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 30px 40px;
+  flex-wrap: wrap;
+  font-size: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
 }

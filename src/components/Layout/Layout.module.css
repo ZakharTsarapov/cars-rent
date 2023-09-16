@@ -27,6 +27,6 @@
 }
 
 .header {
-    background: linear-gradient(to right, #f7ba60d5, #8834b9, #45e2be, #4b4be4);
-    background-color: rgba(0, 255, 234, 0.623);
+  background: linear-gradient(to right, #f7ba60d5, #8834b9, #45e2be, #4b4be4);
+  background-color: rgba(0, 255, 234, 0.623);
 }
