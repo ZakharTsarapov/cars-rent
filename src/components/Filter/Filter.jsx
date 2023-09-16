@@ -1,13 +1,13 @@
 import css from "./Filter.module.css"
 import { makes, price } from "constants/constants";
 import sprite from "../../images/sprite.svg"
-import { useDispatch } from "react-redux";
+
 
 const Filter = () => {
 
 
     return (
-        <form className={css.form}>
+        <form className={css.form} >
         <div className={css.thumb}>
             <label className={css.headLabel} htmlFor="car-select">Car Brand</label>
             <select className={css.select} name="cars" id="car-select" onChange={()=> {}}>
