@@ -43,7 +43,7 @@ const Filter = () => {
                 id="mileageFrom"
                 style={{ paddingLeft: '60px', borderRadius: '14px 0 0 14px' }}>   
                 </input>
-                <label className={css.inpText} htmlFor="mileageTo">From</label>
+                <label className={css.inpText} htmlFor="mileageFrom">From</label>
             </div>
             <div className={css.inputThumb}>
                 <input
