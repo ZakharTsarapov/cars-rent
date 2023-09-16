@@ -25,3 +25,10 @@ export const selectByPrice = createSelector(
         return cars.filter((car) => car.rentalPrice <= filterPrice)
     }
 )
+
+export const selectCarsByMileage = createSelector(
+    [selectFilterMileageFrom, selectFilterMileageFrom, selectCars],
+    (filterMileageTo, filterMileageFrom, cars) => {
+        return cars.filter((car) => (car.mileage <= filterMileageTo) && (car.mileage >= filterMileageFrom) );
+    }
+);
