@@ -14,10 +14,10 @@ const filterSlice = createSlice({
   initialState,
   reducers: {
     updateFilter(state, { payload }) {
-      (state.filterBrand = payload.brand)
-        (state.filterPrice = payload.price)
-        (state.filterMileage.from = payload.mileageFrom)
-        (state.filterMileage.to = payload.mileageTo)
+      state.filterBrand = payload.brand;
+        state.filterPrice = payload.price;
+        state.filterMileage.from = payload.mileageFrom;
+        state.filterMileage.to = payload.mileageTo;
     },
   },
 });

@@ -1,16 +1,31 @@
 import css from "./Filter.module.css"
 import { makes, price } from "constants/constants";
 import sprite from "../../images/sprite.svg"
-
+import { useDispatch } from "react-redux";
+import { updateFilter } from "redux/filterSlice";
 
 const Filter = () => {
+    const dispatch = useDispatch();
+
+    const handleSubmitForm = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const brand = form.elements.brand.value;
+        const mileageFrom = form.elements.mileageFrom.value;
+        const mileageTo = form.elements.mileageTo.value;
+        const price = form.elements.price.value;
+
+
+        dispatch(updateFilter({ brand, price, mileageFrom, mileageTo }));
+        form.reset();
+    };
 
 
     return (
-        <form className={css.form} >
+        <form className={css.form} onSubmit={handleSubmitForm}>
         <div className={css.thumb}>
             <label className={css.headLabel} htmlFor="car-select">Car Brand</label>
-            <select className={css.select} name="brand" id="car-select" onChange={()=> {}}>
+            <select className={css.select} name="brand" id="car-select">
                 <option value="without">All Cars</option>
                 {makes.map((el, index) => (
                     <option key={index} value={el}>{el}</option>
@@ -22,7 +37,7 @@ const Filter = () => {
         </div>
         <div className={css.thumb}>
             <label className={css.headLabel} htmlFor="price-select">Price/ 1 hour</label>
-            <select className={css.secondSelect} name="price" id="price-select" onChange={()=> {}}>
+            <select className={css.secondSelect} name="price" id="price-select">
                 <option value="without">To $</option>
                 {price.map((el, index) => (
                     <option key={index} value={el}>{el}</option>
