@@ -13,22 +13,24 @@ export const selectByCar = createSelector(
   [selectFilterCars, selectCars],
   (filterCars, cars) => {
     const normalizeFilterCars = filterCars.toLowerCase();
-    return cars.filter((car) =>
+    return cars.filter(car =>
       car.make.toLowerCase().includes(normalizeFilterCars)
     );
   }
 );
 
 export const selectByPrice = createSelector(
-    [selectFilterPrice, selectCars],
-    (filterPrice, cars) => {
-        return cars.filter((car) => car.rentalPrice <= filterPrice)
-    }
-)
+  [selectFilterPrice, selectCars],
+  (filterPrice, cars) => {
+    return cars.filter(car => car.rentalPrice <= filterPrice);
+  }
+);
 
 export const selectCarsByMileage = createSelector(
-    [selectFilterMileageFrom, selectFilterMileageFrom, selectCars],
-    (filterMileageTo, filterMileageFrom, cars) => {
-        return cars.filter((car) => (car.mileage <= filterMileageTo) && (car.mileage >= filterMileageFrom) );
-    }
+  [selectFilterMileageFrom, selectFilterMileageFrom, selectCars],
+  (filterMileageTo, filterMileageFrom, cars) => {
+    return cars.filter(
+      car => car.mileage <= filterMileageTo && car.mileage >= filterMileageFrom
+    );
+  }
 );
