@@ -10,7 +10,7 @@ const Filter = () => {
         <form className={css.form} >
         <div className={css.thumb}>
             <label className={css.headLabel} htmlFor="car-select">Car Brand</label>
-            <select className={css.select} name="cars" id="car-select" onChange={()=> {}}>
+            <select className={css.select} name="brand" id="car-select" onChange={()=> {}}>
                 <option value="without">All Cars</option>
                 {makes.map((el, index) => (
                     <option key={index} value={el}>{el}</option>
