@@ -7,6 +7,7 @@ import LoadMoreBtn from 'components/LoadMoreBtn/LoadMoreBtn';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectError, selectIsLoading } from 'redux/selectors';
 import { clearCarsData } from 'redux/slice';
+import Filter from 'components/Filter/Filter';
 
 
 const Catalog = () => {
@@ -29,6 +30,7 @@ const Catalog = () => {
     <div className={css.name}>
       {isLoading && !error && <Loader />}
       {error && <b>{error}</b>}
+      <Filter />
       <CarsList />
       {32 / 8 > page && !isLoading && <LoadMoreBtn onClick={onClickBtn} />}
     </div>

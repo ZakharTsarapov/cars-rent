@@ -1,0 +1,23 @@
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.btn {
+    height: 44px;
+    width: 130px;
+    background-color: #3470FF;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.inputs {
+    display: flex;
+}
