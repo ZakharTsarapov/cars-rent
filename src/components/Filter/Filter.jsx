@@ -48,7 +48,7 @@ const Filter = () => {
             </svg>
         </div>
         <div className={css.thumb}>
-        <label className={css.headLabel}>Car mileage / km</label>
+        <label className={css.headLabel} htmlFor="mileageFrom">Car mileage / km</label>
         <div className={css.inputs}>
             <div className={css.inputThumb}>
                 <input
