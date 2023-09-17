@@ -18,7 +18,7 @@ export const selectFiltredCars = createSelector(
     selectFilterMileageTo,
   ],
   (cars, filterBrand, filterPrice, filterMileageFrom, filterMileageTo) => {
-    if (filterBrand !== '') {
+    if (filterBrand !== 'without') {
       const normalizeFilterBrand = filterBrand.toLowerCase();
 
       const selectCarsByBrand = cars.filter(car =>
@@ -26,7 +26,7 @@ export const selectFiltredCars = createSelector(
       );
       return selectCarsByBrand;
     }
-    if (filterPrice !== '') {
+    if (filterPrice !== 'without') {
       
       const selectCarsByPrice = cars.filter(
         car => car.rentalPrice <= filterPrice
